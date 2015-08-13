@@ -13,9 +13,9 @@ psx_retroshader includes 4 shaders:
 - trasparent vertex lit
 
 All shaders supports Fog, polygon cut-out & distortion amount.
-Fog color & distance is driven by Unity fog settings (remember to set as linear fog).
-Polygon cutout is driven by tha alpha channel of Fog Color, it works by cutting every polygon that are greater in distance than fogstart+fogcolor.alpha (fog color is in range 0-1 but is multiplied in the shader by 255)
-Distortion amount is driven by the alpha channel of unity's ambient color, you can adjust it as you please.
+- Fog color & distance is driven by Unity fog settings (remember to set as linear fog).
+- Polygon cutout is driven by tha alpha channel of Fog Color, it works by cutting every polygon that are greater in distance than fogstart+fogcolor.alpha (fog color is in range 0-1 but is multiplied in the shader by 255)
+- Distortion amount is driven by the alpha channel of unity's ambient color, you can adjust it as you please.
 
 #Warning
 Like the original ps1 this shader use affine texture mapping, so if you apply a texture on a large quad you'll see it very distored.
