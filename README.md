@@ -1,6 +1,7 @@
 # psx_retroshader
 Shaders collection for Unity that "emulates" the rendering style of ps1
 
+WebPlayer (it's an old build): https://dl.dropboxusercontent.com/u/1050404/psx/psx.html
 You can see it in action here: https://www.youtube.com/watch?v=MxcLA--2v-Y
 
 ![ScreenShot](http://i.imgur.com/MS7sjt3.png)
