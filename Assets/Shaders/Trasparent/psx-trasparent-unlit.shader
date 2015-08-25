@@ -4,12 +4,12 @@
 	} 
 	SubShader {
 		Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"  "DisableBatching"="True"}
-	//	ZWrite Off
-		Blend SrcAlpha OneMinusSrcAlpha  
+		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha // Alpha blending
         //AlphaTest Less .01 
         Cull Off
 		LOD 200	    
-		     
+		      
 		Pass { 
 		Lighting On
 			CGPROGRAM

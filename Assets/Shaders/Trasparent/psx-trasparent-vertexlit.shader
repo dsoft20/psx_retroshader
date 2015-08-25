@@ -4,7 +4,7 @@
 	}
 	SubShader {
 		Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"  "DisableBatching"="True"}
-		//ZWrite Off
+		ZWrite Off
 		Blend SrcAlpha OneMinusSrcAlpha
       //  AlphaTest Less .01
         Cull Off
@@ -14,7 +14,7 @@
 		Lighting On
 			CGPROGRAM
 			 
-			  
+			   
 				#pragma vertex vert
 				#pragma fragment frag
 				#include "UnityCG.cginc"
@@ -37,20 +37,20 @@
 					v2f o;		
 
 					//Vertex snapping
-					float4 snapToPixel = mul(UNITY_MATRIX_MVP,v.vertex);
-					float4 vertex =  snapToPixel;
-					vertex.xyz = snapToPixel.xyz/snapToPixel.w;
-					vertex.x = round(160*vertex.x)/160;
-					vertex.y = round(120*vertex.y)/120; 
-					vertex.xyz*=snapToPixel.w;
+					float4 snapToPixel = mul(UNITY_MATRIX_MVP, v.vertex);
+					float4 vertex = snapToPixel;
+					vertex.xyz = snapToPixel.xyz / snapToPixel.w;
+					vertex.x = floor(160 * vertex.x) / 160;
+					vertex.y = floor(120 * vertex.y) / 120;
+					vertex.xyz *= snapToPixel.w;
 					o.pos = vertex;
 
-					float distance = abs(_WorldSpaceCameraPos.z-snapToPixel.z);
-										
 					//Vertex lighting 
-					o.color =  float4 (ShadeVertexLights(v.vertex, v.normal) * 2.0, 1.0);
+					o.color = float4(ShadeVertexLights(v.vertex, v.normal) * 2.0, 1.0);
 					o.color *= v.color;
-									
+
+					float distance = length(mul(UNITY_MATRIX_MV, v.vertex));
+
 					//Affine Texture Mapping
 					float4 affinePos = vertex;//vertex;				
 					o.uv_MainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
@@ -58,14 +58,14 @@
 					o.normal = distance + (vertex.w*(UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
 
 					//Fog
-					float4 fogColor = unity_FogColor;				
-					float fogDensity = (unity_FogEnd-distance)/(unity_FogEnd-unity_FogStart);					
+					float4 fogColor = unity_FogColor;
+
+					float fogDensity = (unity_FogEnd - distance) / (unity_FogEnd - unity_FogStart);
 					o.normal.g = fogDensity;
 					o.normal.b = 1;
-					
-					 
-					o.colorFog = fogColor; 
-					o.colorFog.a = clamp(fogDensity,0,1);
+
+					o.colorFog = fogColor;
+					o.colorFog.a = clamp(fogDensity, 0, 1);
 
 					//Cut out polygons
 					if (distance >= unity_FogStart.z + unity_FogColor.a * 255)
