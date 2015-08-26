@@ -1,12 +1,11 @@
-﻿Shader "psx/trasparent/unlit" {
+﻿Shader "psx/unlit_noambient" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 	}
 		SubShader{
-		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
+		Tags{ "RenderType" = "Opaque" }
 		LOD 200
-		Blend SrcAlpha OneMinusSrcAlpha
-		Zwrite Off
+
 		Pass{
 		Lighting On
 		CGPROGRAM
@@ -42,7 +41,7 @@
 		o.pos = vertex;
 
 		//Vertex lighting 
-		o.color = v.color*UNITY_LIGHTMODEL_AMBIENT;
+		o.color = v.color;
 
 		float distance = length(mul(UNITY_MATRIX_MV,v.vertex));
 
@@ -79,7 +78,6 @@
 		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
 		half4 color = c*(IN.colorFog.a);
 		color.rgb += IN.colorFog.rgb*(1 - IN.colorFog.a);
-		color.a = c.a;
 		return color;
 	}
 		ENDCG

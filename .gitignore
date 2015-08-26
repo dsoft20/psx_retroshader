@@ -62,3 +62,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+Assets/UnityVS.meta
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll.meta
+debug-glsl-error-in-d3dcompile-orig.txt
+debug-glsl-error-in-d3dcompile.txt

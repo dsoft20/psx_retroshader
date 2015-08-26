@@ -1,4 +1,4 @@
-﻿Shader "psx/trasparent/unlit" {
+﻿Shader "psx/trasparent/unlit_noambient" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 	}
@@ -42,7 +42,8 @@
 		o.pos = vertex;
 
 		//Vertex lighting 
-		o.color = v.color*UNITY_LIGHTMODEL_AMBIENT;
+
+		o.color = v.color;
 
 		float distance = length(mul(UNITY_MATRIX_MV,v.vertex));
 

@@ -8,7 +8,7 @@
 		 
 		Pass {  
 		Lighting On
-			CGPROGRAM			 
+			CGPROGRAM			
 
 				#pragma vertex vert
 				#pragma fragment frag
@@ -17,10 +17,10 @@
 				struct v2f 
 				{
 					fixed4 pos : SV_POSITION;
-					float4 color : COLOR0;
-					float4 colorFog : COLOR1;
+					half4 color : COLOR0;
+					half4 colorFog : COLOR1;
 					float2 uv_MainTex : TEXCOORD0;
-					float3 normal : NORMAL;
+					half3 normal : NORMAL;
 				};
 			
 				float4 _MainTex_ST;
@@ -39,7 +39,7 @@
 					vertex.y = floor(120*vertex.y)/120;
 					vertex.xyz*=snapToPixel.w;
 					o.pos = vertex;
-										
+
 					//Vertex lighting 
 					o.color =  float4(ShadeVertexLights(v.vertex, v.normal) * 2.0, 1.0);
 					o.color *= v.color;
@@ -63,7 +63,7 @@
 					o.colorFog.a = clamp(fogDensity,0,1);
 
 					//Cut out polygons
-					if (distance >= unity_FogStart.z + unity_FogColor.a * 255)
+					if (distance > unity_FogStart.z + unity_FogColor.a * 255)
 					{
 						o.pos.w = 0;
 					}
@@ -76,8 +76,8 @@
 			
 				float4 frag(v2f IN) : COLOR 
 				{
-					fixed4 c = tex2D (_MainTex, IN.uv_MainTex/IN.normal.r)*IN.color;				
-					float4 color = c*(IN.colorFog.a);
+					half4 c = tex2D (_MainTex, IN.uv_MainTex/IN.normal.r)*IN.color;				
+					half4 color = c*(IN.colorFog.a);
 					color.rgb += IN.colorFog.rgb*(1-IN.colorFog.a);					
 					return color;
 				}
