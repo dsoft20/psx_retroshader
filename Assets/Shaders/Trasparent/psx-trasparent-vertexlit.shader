@@ -12,7 +12,7 @@
 
 #pragma vertex vert
 #pragma fragment frag
-#include "UnityCG.cginc"
+#include "UnityCG.cginc" 
 
 	struct v2f
 	{
@@ -20,7 +20,7 @@
 		half4 color : COLOR0;
 		half4 colorFog : COLOR1;
 		float2 uv_MainTex : TEXCOORD0;
-		half3 normal : NORMAL;
+		half3 normal: TEXCOORD1;
 	};
 
 	float4 _MainTex_ST;
@@ -43,7 +43,8 @@
 
 		//o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 		//Vertex lighting 
-		o.color = float4(ShadeVertexLights(v.vertex, v.normal) * 2.0, 1.0);
+		//o.color = float4(ShadeVertexLights(v.vertex, v.normal), 1.0);
+		o.color = float4(ShadeVertexLightsFull(v.vertex, v.normal, 4, true), 1.0);
 		o.color *= v.color;
 
 		float distance = length(mul(UNITY_MATRIX_MV,v.vertex));

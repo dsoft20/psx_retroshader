@@ -21,7 +21,7 @@
 		half4 color : COLOR0;
 		half4 colorFog : COLOR1;
 		float2 uv_MainTex : TEXCOORD0;
-		half3 normal : NORMAL;
+		half3 normal: TEXCOORD1;
 	};
 
 	float4 _MainTex_ST;
