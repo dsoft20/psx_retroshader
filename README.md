@@ -7,11 +7,16 @@ You can see it in action here: https://www.youtube.com/watch?v=MxcLA--2v-Y
 ![ScreenShot](http://i.imgur.com/MS7sjt3.png)
 
 #Content & usage
-psx_retroshader includes 4 shaders:
+psx_retroshader includes 4 shaders, plus a simple posterize image effect (cPrecision.cs):
 - unlit
 - vertex lit
 - trasparent unlit
 - trasparent vertex lit
+
+Vertex lit shaders now supports spotlights too!
+
+Example of the posterize shader:
+![ScreenShot](http://i.imgur.com/HE5fxhT.png)
 
 All shaders supports Fog, polygon cut-out & distortion amount.
 - Fog color & distance is driven by Unity fog settings (remember to set as linear fog).
@@ -23,6 +28,7 @@ Like the original ps1 this shader use affine texture mapping, so if you apply a 
 To avoid excessive distortion you have to add triangless to the mesh.
 
 Example:
+
 ![ScreenShot](http://i.imgur.com/zC2T1uJ.png)
 
 As you can see the effect is better when the mesh is subdivided (bottom left mesh) instead of when the mesh have a low poly count (top right mesh) 
