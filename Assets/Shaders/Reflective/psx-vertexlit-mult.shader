@@ -1,4 +1,4 @@
-﻿Shader "psx/reflective/vertexlit" {
+﻿Shader "psx/reflective/vertexlit-Mult" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_Cube("Cubemap", CUBE) = "" {}

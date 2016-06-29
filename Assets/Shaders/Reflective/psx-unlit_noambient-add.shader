@@ -1,4 +1,4 @@
-﻿Shader "psx/reflective/unlit_noambient" {
+﻿Shader "psx/reflective/unlit_noambient-Add" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_Cube("Cubemap", CUBE) = "" {}
@@ -8,7 +8,7 @@
 		LOD 200
 
 		Pass{
-		Lighting On
+		Lighting Off
 		CGPROGRAM
 
 #pragma vertex vert
@@ -84,7 +84,7 @@
 	float4 frag(v2f IN) : COLOR
 	{
 		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
-		c *= texCUBE(_Cube, IN.reflect);
+		c += texCUBE(_Cube, IN.reflect);
 		half4 color = c*(IN.colorFog.a);
 		color.rgb += IN.colorFog.rgb*(1 - IN.colorFog.a);
 		return color;
