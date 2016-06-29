@@ -2,9 +2,11 @@
 Shaders collection for Unity that "emulates" the rendering style of ps1
 
 WebPlayer (it's an old build): https://dl.dropboxusercontent.com/u/1050404/psx/psx.html
+
 You can see it in action here: https://www.youtube.com/watch?v=MxcLA--2v-Y
 
 ![ScreenShot](http://i.imgur.com/MS7sjt3.png)
+![ScreenShot](http://i.imgur.com/my438QX.gif)
 
 #Content & usage
 psx_retroshader includes 4 shaders, plus a simple posterize image effect (cPrecision.cs):
@@ -12,6 +14,7 @@ psx_retroshader includes 4 shaders, plus a simple posterize image effect (cPreci
 - vertex lit
 - trasparent unlit
 - trasparent vertex lit
+- Reflective shaders (Add & Mult variants)
 
 Vertex lit shaders now supports spotlights too!
 
