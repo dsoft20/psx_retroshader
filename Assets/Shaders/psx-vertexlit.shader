@@ -1,6 +1,7 @@
 ﻿Shader "psx/vertexlit" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
+		_SnapPrecision("Snap Precision", Range (10,1000)) = 160
 	}
 		SubShader{
 			Tags { "RenderType" = "Opaque" }
@@ -24,6 +25,7 @@
 					};
 
 					float4 _MainTex_ST;
+					uniform float _SnapPrecision;
 					uniform half4 unity_FogStart;
 					uniform half4 unity_FogEnd;
 
@@ -35,8 +37,8 @@
 						float4 snapToPixel = mul(UNITY_MATRIX_MVP,v.vertex);
 						float4 vertex = snapToPixel;
 						vertex.xyz = snapToPixel.xyz / snapToPixel.w;
-						vertex.x = floor(160 * vertex.x) / 160;
-						vertex.y = floor(120 * vertex.y) / 120;
+						vertex.x = floor(_SnapPrecision * vertex.x) / _SnapPrecision;
+						vertex.y = floor((_SnapPrecision * 0.75) * vertex.y) / (_SnapPrecision * 0.75);
 						vertex.xyz *= snapToPixel.w;
 						o.pos = vertex;
 
