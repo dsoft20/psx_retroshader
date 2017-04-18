@@ -8,7 +8,7 @@ You can see it in action here: https://www.youtube.com/watch?v=MxcLA--2v-Y
 ![ScreenShot](http://i.imgur.com/MS7sjt3.png)
 ![ScreenShot](http://i.imgur.com/my438QX.gif)
 
-#Content & usage
+# Content & usage
 psx_retroshader includes 4 shaders, plus a simple posterize image effect (cPrecision.cs):
 - unlit
 - vertex lit
@@ -26,7 +26,7 @@ All shaders supports Fog, polygon cut-out & distortion amount.
 - Polygon cutout is driven by tha alpha channel of Fog Color, it works by cutting every polygon that are greater in distance than fogstart+fogcolor.alpha (fog color is in range 0-1 but is multiplied in the shader by 255)
 - Distortion amount is driven by the alpha channel of unity's ambient color, you can adjust it as you please.
 
-#Warning
+# Warning
 Like the original ps1 this shader use affine texture mapping, so if you apply a texture on a large quad you'll see it very distored.
 To avoid excessive distortion you have to add triangless to the mesh.
 
