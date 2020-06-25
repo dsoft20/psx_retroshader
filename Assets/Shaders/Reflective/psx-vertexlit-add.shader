@@ -1,4 +1,7 @@
-﻿Shader "psx/reflective/vertexlit-Add" {
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "psx/reflective/vertexlit-Add" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_Cube("Cubemap", CUBE) = "" {}
@@ -34,7 +37,7 @@
 						v2f o;
 
 						//Vertex snapping
-						float4 snapToPixel = mul(UNITY_MATRIX_MVP,v.vertex);
+						float4 snapToPixel = UnityObjectToClipPos(v.vertex);
 						float4 vertex = snapToPixel;
 						vertex.xyz = snapToPixel.xyz / snapToPixel.w;
 						vertex.x = floor(160 * vertex.x) / 160;
@@ -44,7 +47,7 @@
 
 						//Reflection
 						float3 viewDir = WorldSpaceViewDir(v.vertex);
-						float3 worldN = mul((float3x3)_Object2World, v.normal * 1.0);
+						float3 worldN = mul((float3x3)unity_ObjectToWorld, v.normal * 1.0);
 						o.reflect = reflect(-viewDir, worldN);
 
 						//Vertex lighting 
