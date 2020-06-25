@@ -1,4 +1,6 @@
-﻿Shader "psx/trasparent/vertexlit" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "psx/trasparent/vertexlit" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 	}
@@ -32,7 +34,7 @@
 		v2f o;
 
 		//Vertex snapping
-		float4 snapToPixel = mul(UNITY_MATRIX_MVP,v.vertex);
+		float4 snapToPixel = UnityObjectToClipPos(v.vertex);
 		float4 vertex = snapToPixel;
 		vertex.xyz = snapToPixel.xyz / snapToPixel.w;
 		vertex.x = floor(160 * vertex.x) / 160;
@@ -52,8 +54,8 @@
 		//Affine Texture Mapping
 		float4 affinePos = vertex;//vertex;				
 		o.uv_MainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
-		o.uv_MainTex *= distance + (vertex.w*(UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
-		o.normal = distance + (vertex.w*(UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
+		o.uv_MainTex *= distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
+		o.normal = distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
 
 		//Fog
 		float4 fogColor = unity_FogColor;
@@ -66,11 +68,10 @@
 		o.colorFog.a = clamp(fogDensity,0,1);
 
 		//Cut out polygons
-		if (distance > unity_FogStart.z + unity_FogColor.a * 255)
+		if (distance > unity_FogEnd.z + unity_FogColor.a * 255)
 		{
-			o.pos.w = 0;
+			o.pos = 0;
 		}
-
 
 		return o;
 	}
@@ -79,9 +80,9 @@
 
 	float4 frag(v2f IN) : COLOR
 	{
-		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
-		half4 color = c*(IN.colorFog.a);
-		color.rgb += IN.colorFog.rgb*(1 - IN.colorFog.a);
+		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r) * IN.color;
+		half4 color = c * (IN.colorFog.a);
+		color.rgb += IN.colorFog.rgb * (1 - IN.colorFog.a);
 		color.a = c.a;
 		return color;
 	}
