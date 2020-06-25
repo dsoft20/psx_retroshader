@@ -23,7 +23,7 @@ Shader "psx/unlit_noambient" {
 		half4 colorFog : COLOR1;
 		float2 uv_MainTex : TEXCOORD0;
 		half3 normal : TEXCOORD1;
-	}; 
+	};
 
 	float4 _MainTex_ST;
 	uniform half4 unity_FogStart;
@@ -50,8 +50,8 @@ Shader "psx/unlit_noambient" {
 		//Affine Texture Mapping
 		float4 affinePos = vertex;//vertex;				
 		o.uv_MainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
-		o.uv_MainTex *= distance + (vertex.w*(UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
-		o.normal = distance + (vertex.w*(UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
+		o.uv_MainTex *= distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
+		o.normal = distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
 
 		//Fog
 		float4 fogColor = unity_FogColor;
@@ -64,11 +64,10 @@ Shader "psx/unlit_noambient" {
 		o.colorFog.a = clamp(fogDensity,0,1);
 
 		//Cut out polygons
-		if (distance > unity_FogStart.z + unity_FogColor.a * 255)
+		if (distance > unity_FogEnd.z + unity_FogColor.a * 255)
 		{
-			o.pos.w = 0;
+			o.pos = 0;
 		}
-
 
 		return o;
 	}
@@ -77,9 +76,9 @@ Shader "psx/unlit_noambient" {
 
 	float4 frag(v2f IN) : COLOR
 	{
-		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
-		half4 color = c*(IN.colorFog.a);
-		color.rgb += IN.colorFog.rgb*(1 - IN.colorFog.a);
+		half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r) * IN.color;
+		half4 color = c * (IN.colorFog.a);
+		color.rgb += IN.colorFog.rgb * (1 - IN.colorFog.a);
 		return color;
 	}
 		ENDCG
