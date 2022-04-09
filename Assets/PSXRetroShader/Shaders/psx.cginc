@@ -10,6 +10,7 @@ struct psx_v2f
 	half4 color : COLOR;
 	float3 reflect : COLOR1;
 	UNITY_FOG_COORDS(2)
+	UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
 struct psx_appdata
@@ -19,6 +20,7 @@ struct psx_appdata
 	float4 texcoord : TEXCOORD0;
 	float2 texcoord1 : TEXCOORD1;
 	fixed4 color : COLOR;
+	UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
 //returns vertex position snapped to the _XPrecision and _YPrecision
