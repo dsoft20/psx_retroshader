@@ -15,11 +15,11 @@ F:/psx_retroshader/psx_retroshader
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59843
+63629
 Successfully changed project path to: F:/psx_retroshader/psx_retroshader
 F:/psx_retroshader/psx_retroshader
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 24.85 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 23.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.17f1 (a4537701e4ab)
 [Subsystems] Discovering subsystems at path D:/Unity/2019/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -35,72 +35,72 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2019/2020.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2019/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2019/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2019/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000875 seconds.
+Registered in 0.000878 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 24.37 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 23.95 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.391 seconds
+- Completed reload, in  1.433 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1391ms)
+	ReloadAssembly (1434ms)
 		BeginReloadAssembly (40ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (318ms)
-			LoadAssemblies (39ms)
+		EndReloadAssembly (313ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (118ms)
+			SetupTypeCache (117ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (123ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (121ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (24ms)
 				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (61ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				ProcessInitializeOnLoadAttributes (60ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002046 seconds.
+Registered in 0.002062 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.826 seconds
+- Completed reload, in  0.818 seconds
 Domain Reload Profiling:
-	ReloadAssembly (827ms)
-		BeginReloadAssembly (116ms)
+	ReloadAssembly (819ms)
+		BeginReloadAssembly (113ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (663ms)
-			LoadAssemblies (64ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (658ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (208ms)
+			SetupTypeCache (209ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (285ms)
+			SetupLoadedEditorAssemblies (280ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (219ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (216ms)
 				ProcessInitializeOnLoadMethodAttributes (3ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
@@ -110,14 +110,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1406 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 67.3 MB.
 System memory in use after: 67.4 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1846.
-Total: 2.612700 ms (FindLiveObjects: 0.168700 ms CreateObjectMapping: 0.031800 ms MarkObjects: 2.360300 ms  DeleteObjects: 0.050900 ms)
+Total: 2.619600 ms (FindLiveObjects: 0.155500 ms CreateObjectMapping: 0.030000 ms MarkObjects: 2.370300 ms  DeleteObjects: 0.062900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,33 +131,321 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/PSXRetroShader/Scripts/billboard.cs
-  artifactKey: Guid(21936717c9a19c642b831fe3c2bb96a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PSXRetroShader/Scripts/billboard.cs using Guid(21936717c9a19c642b831fe3c2bb96a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260593a15411bf242a4731ab97270b37') in 0.026745 seconds 
-  Import took 0.028645 seconds .
+  path: Assets/PSXRetroShader/Materials/tex003_lm.mat
+  artifactKey: Guid(1d14a683cdfd8ef448df2f9e1840e3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/tex003_lm.mat using Guid(1d14a683cdfd8ef448df2f9e1840e3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c56eb57d11ce425e31f2b0d29bcdc0be') in 0.097085 seconds 
+  Import took 0.099150 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.414607 seconds.
-  path: Assets/PSXRetroShader/Scripts/rotate.cs
-  artifactKey: Guid(10e971bcf4512f54a9beb8c98b0e5300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PSXRetroShader/Scripts/rotate.cs using Guid(10e971bcf4512f54a9beb8c98b0e5300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7795f14f2b9860f0b32f582a9e8dda') in 0.004437 seconds 
-  Import took 0.006454 seconds .
+  Time since last request: 0.000164 seconds.
+  path: Assets/PSXRetroShader/Materials/tex006_lm.mat
+  artifactKey: Guid(a80027eed8354fd4a86ba3ea1b2733f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/tex006_lm.mat using Guid(a80027eed8354fd4a86ba3ea1b2733f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '975b03da8da950bd09f2c71fb7836fc2') in 0.010906 seconds 
+  Import took 0.012812 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3437.536076 seconds.
-  path: Assets/PSXRetroShader/Shaders/psx.cginc
-  artifactKey: Guid(756f08d1239c89f4886f7d5c32b4cdff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PSXRetroShader/Shaders/psx.cginc using Guid(756f08d1239c89f4886f7d5c32b4cdff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a1e6f5658cb777d0ddd93caff7fd1bb') in 0.015319 seconds 
-  Import took 0.017531 seconds .
+  Time since last request: 0.000174 seconds.
+  path: Assets/PSXRetroShader/Materials/tex002_lm.mat
+  artifactKey: Guid(423403904e0e082439aa42749b869cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/tex002_lm.mat using Guid(423403904e0e082439aa42749b869cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8c20a8007bda8763cf3482f0d6f78a') in 0.009901 seconds 
+  Import took 0.012150 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 36.669502 seconds.
+  Time since last request: 0.000145 seconds.
+  path: Assets/PSXRetroShader/Materials/billboard001.mat
+  artifactKey: Guid(beae8e544cba2544d9457eaa2ea00a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/billboard001.mat using Guid(beae8e544cba2544d9457eaa2ea00a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4096fdeecf119909e74e16aac8ec8a11') in 0.014838 seconds 
+  Import took 0.016938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 711.879326 seconds.
+  path: Assets/PSXRetroShader/Scenes/testscene 1.unity
+  artifactKey: Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Scenes/testscene 1.unity using Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '347c1446381f90132e5b9b17e093028b') in 0.005380 seconds 
+  Import took 0.007730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000426 seconds.
+  path: Assets/PSXRetroShader/Scenes/testscene 1.unity
+  artifactKey: Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Scenes/testscene 1.unity using Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '347c1446381f90132e5b9b17e093028b') in 0.001606 seconds 
+  Import took 0.003812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.408596 seconds.
+  path: Assets/PSXRetroShader/Scenes/instancing.unity
+  artifactKey: Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Scenes/instancing.unity using Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ee8be62d1b7ebb373e15350b51f232') in 0.004748 seconds 
+  Import took 0.006901 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002069 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.753 seconds
+Domain Reload Profiling:
+	ReloadAssembly (754ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (626ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (202ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (259ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (50ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.8 MB.
+System memory in use after: 69.9 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1888.
+Total: 2.620800 ms (FindLiveObjects: 0.173900 ms CreateObjectMapping: 0.030300 ms MarkObjects: 2.396100 ms  DeleteObjects: 0.019300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 29.931600 seconds.
+  path: Assets/PSXRetroShader/Materials/cube002_instancing.mat
+  artifactKey: Guid(783b1ca499823f14f8169e47aba74d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/cube002_instancing.mat using Guid(783b1ca499823f14f8169e47aba74d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9224a6f7187dde8899c32e3ebb15bb39') in 0.046233 seconds 
+  Import took 0.048487 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002149 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.770 seconds
+Domain Reload Profiling:
+	ReloadAssembly (771ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (630ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (200ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (265ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (50ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.8 MB.
+System memory in use after: 70.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1891.
+Total: 2.860000 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.033700 ms MarkObjects: 2.645300 ms  DeleteObjects: 0.018000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 233.986548 seconds.
+  path: Assets/PSXRetroShader/Materials/cube002_instancing.mat
+  artifactKey: Guid(783b1ca499823f14f8169e47aba74d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Materials/cube002_instancing.mat using Guid(783b1ca499823f14f8169e47aba74d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '348810059a510fb113fc52007bd8d3e9') in 0.044644 seconds 
+  Import took 0.046802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 182.106947 seconds.
+  path: Assets/PSXRetroShader/Scenes/instancing.unity
+  artifactKey: Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Scenes/instancing.unity using Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3f51e606e9d9de745231946f937853b') in 0.002350 seconds 
+  Import took 0.004470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/PSXRetroShader/Scenes/instancing.unity
+  artifactKey: Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PSXRetroShader/Scenes/instancing.unity using Guid(971aa1dc81d27a140bcd298e77880a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3f51e606e9d9de745231946f937853b') in 0.001534 seconds 
+  Import took 0.003536 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.759 seconds
+Domain Reload Profiling:
+	ReloadAssembly (759ms)
+		BeginReloadAssembly (87ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (626ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (199ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (262ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (201ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.9 MB.
+System memory in use after: 70.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1894.
+Total: 2.722100 ms (FindLiveObjects: 0.153400 ms CreateObjectMapping: 0.031200 ms MarkObjects: 2.519000 ms  DeleteObjects: 0.017800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 57.635830 seconds.
   path: Assets/PSXRetroShader/todos.txt
   artifactKey: Guid(672c5a55a70b6cd43a55714ee48e36bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PSXRetroShader/todos.txt using Guid(672c5a55a70b6cd43a55714ee48e36bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b58450e03278e3739cfe1014f9e4c22') in 0.009418 seconds 
-  Import took 0.011496 seconds .
+Start importing Assets/PSXRetroShader/todos.txt using Guid(672c5a55a70b6cd43a55714ee48e36bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a72896b758cafc7353a646c22bc61c') in 0.014958 seconds 
+  Import took 0.017169 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003791 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.756 seconds
+Domain Reload Profiling:
+	ReloadAssembly (757ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (626ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (198ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (265ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (203ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.9 MB.
+System memory in use after: 70.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1896.
+Total: 2.634000 ms (FindLiveObjects: 0.149900 ms CreateObjectMapping: 0.029700 ms MarkObjects: 2.436100 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
