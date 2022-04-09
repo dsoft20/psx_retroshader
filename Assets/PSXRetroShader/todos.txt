@@ -3,6 +3,6 @@
 [O] Remove custom fog calculation and use Unity builtin functions
 [O] Customizable vertex precision
 [O] More universal shaders with shader features and enums (2 shaders instead of 13)
-[X] Shader based billboards
-[X] Add lightmapping support
+[-] Shader based billboards - NOT USABLE
+[O] Add lightmapping support
 [X] More cleanups

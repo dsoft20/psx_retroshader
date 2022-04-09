@@ -1,6 +1,7 @@
-﻿Shader "psx/psx" {
+﻿Shader "psx/psx-lightmapped" {
 	Properties{
 		[KeywordEnum(VertexLit, UnlitAmbient, Unlit)] _Lightning ("Lighting mode", Float) = 0
+		_Color("Color", Color) = (1, 1, 1, 1)
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_Cube("Reflection map", CUBE) = "" {}
 		_ReflectionPower("Reflection power", Range(0, 1)) = 0
@@ -11,18 +12,22 @@
 		LOD 200
 
 		Pass{
-			Lighting On
 			CGPROGRAM
 
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile_fog
+			#pragma multi_compile __ LIGHTMAP_ON
 			#pragma shader_feature _LIGHTNING_VERTEXLIT _LIGHTNING_UNLITAMBIENT _LIGHTNING_UNLIT
 			#pragma shader_feature _REFLECTION_ADD _REFLECTION_MULT
 			#include "UnityCG.cginc"
 			#include "psx.cginc"
 
 			float4 _MainTex_ST;
+			sampler2D _MainTex;
+			half4 _Color;
+			samplerCUBE _Cube;
+			half _ReflectionPower;
 
 			psx_v2f vert(psx_appdata v)
 			{
@@ -42,34 +47,41 @@
 				#endif
 
 				//Affine texture mapping
-				o.uv_MainTex = affineMapping(v, o.pos, _MainTex_ST, o.normal);
+				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 
 				//Reflection
 				o.reflect = calculateReflection(v);
-				//Affine texturing for cubemap
-				o.reflect *= o.normal;
+
+				//Lightmapping
+				#if LIGHTMAP_ON
+				o.uv1 = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+				#endif
 
 				UNITY_TRANSFER_FOG(o, o.pos);
 
 				return o;
 			}
 
-			sampler2D _MainTex;
-			samplerCUBE _Cube;
-			half _ReflectionPower;
-
 			float4 frag(psx_v2f IN) : COLOR
 			{
-				half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r)*IN.color;
+				half4 c = tex2D(_MainTex, IN.uv) * IN.color * _Color;
+
 				#if _REFLECTION_ADD
 				c += texCUBE(_Cube, IN.reflect) * _ReflectionPower;
 				#else
 				c = lerp(c, c * texCUBE(_Cube, IN.reflect), _ReflectionPower);
 				#endif
+
+				#if LIGHTMAP_ON
+				c.rgb *= DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, IN.uv1));
+				#endif
+
 				UNITY_APPLY_FOG(IN.fogCoord, c);
 				return c;
 			}
 			ENDCG
 		}
 	}
+
+	Fallback "Diffuse"
 }
