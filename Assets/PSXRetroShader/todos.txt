@@ -1,0 +1,10 @@
+[O] Code cleaning, moving repeating code to the .cginc file
+[O] Remove the vertex cutout by the fog distance
+[O] Remove custom fog calculation and use Unity builtin functions
+[O] Customizable vertex precision
+[O] More universal shaders with shader features and enums (2 shaders instead of 13)
+[-] Shader based billboards - NOT USABLE
+[O] Add lightmapping support
+[O] More cleanups
+[O] Cull selection option
+[O] Instancing support
